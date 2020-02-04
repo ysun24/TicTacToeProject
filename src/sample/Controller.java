@@ -1,92 +1,202 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
-import javafx.event.EventHandler;
+
+import java.awt.*;
+
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
-public class Controller extends Button implements EventHandler {
+import javax.swing.*;
+
+public class Controller {
+
+        int controlLoop = 0;
+        int turn = 0;
         @FXML
-        private Button btn00,btn01,btn02,btn10,btn11,btn12,btn20,btn21,btn22;
-        private Button[] buttons; // Array of the buttons
-        private final int MAX = 9;
-        private int value;
-
-        public Controller(){
-                this.setState(0);
-                value = 0;
-        }
-
-        public void initialize(){
-                initializeButtonArray();
-        }
-
-        public void initializeButtonArray(){
-                buttons = new Button[9]; // init array of buttons
-                buttons[0] = btn00;
-                buttons[1] = btn01;
-                buttons[2] = btn02;
-                buttons[3] = btn10;
-                buttons[4] = btn11;
-                buttons[5] = btn12;
-                buttons[6] = btn20;
-                buttons[7] = btn21;
-                buttons[8] = btn22;
-        }
-
-        @Override
-        public void handle(Event event) {
-                for(int i = 0; i < MAX; ++i){
-                        if(buttons[i] == event.getSource()){
-                                try {
-
-                                        buttons[i].setText("X");
-                                        //buttons[i].changeState();
-                                        System.out.println(buttons[i] );
+        Label label;
+        @FXML
+        Label label2;
+        @FXML
+        Label label3;
+        @FXML
+        Label label4;
+        @FXML
+        Label label5;
+        @FXML
+        Label label6;
+        @FXML
+        Label label7;
+        @FXML
+        Label label8;
+        @FXML
+        Label label9;
 
 
-                                } catch (Exception e) {
-                                        e.printStackTrace();
-                                }
-                        }
+
+        public void onClicked(){
+                turn = controlLoop % 2;
+                if(turn == 0){
+                        System.out.println(controlLoop+"X");
+                        label.setPrefSize(200,200);
+                        label.setText("X");
+                }
+                else if(turn == 1){
+                        System.out.println(controlLoop+"O");
+                        label.setPrefSize(200,200);
+                        label.setText("O");
+                }
+                else{
+                        System.out.println(controlLoop+"SOMETHINGS WRONG");
                 }
 
+                controlLoop++;
         }
-
-        public void setState(int state){ // Was trying to set values for each symbol easyer to
-                                        // to figure out a winner 3 would be winner or -3
-                if(state == 0){
-                        this.setText("-");
-                        this.value = 0;
-                }else if(state == 1){
-                        this.setText("X");
-                        this.value = 1;
-                }else if(state == -1){
-                        this.setText("O");
-                        this.value = -1;
-                } else {
-                        System.out.println("Set state called with incorrect state");
+        public void onClicked2(){
+                turn = controlLoop % 2;
+                if(turn == 0){
+                        System.out.println(controlLoop+"X");
+                        label2.setPrefSize(200,200);
+                        label2.setText("X");
+                }
+                else if(turn == 1){
+                        System.out.println(controlLoop+"O");
+                        label2.setPrefSize(200,200);
+                        label2.setText("O");
+                }
+                else{
+                        System.out.println(controlLoop+"SOMETHINGS WRONG");
                 }
 
+                controlLoop++;
+        }
+        public void onClicked3(){
+                turn = controlLoop % 2;
+                if(turn == 0){
+                        System.out.println(controlLoop+"X");
+                        label3.setPrefSize(200,200);
+                        label3.setText("X");
+                }
+                else if(turn == 1){
+                        System.out.println(controlLoop+"O");
+                        label3.setPrefSize(200,200);
+                        label3.setText("O");
+                }
+                else{
+                        System.out.println(controlLoop+"SOMETHINGS WRONG");
+                }
+
+                controlLoop++;
+        }
+        public void onClicked4(){
+                turn = controlLoop % 2;
+                if(turn == 0){
+                        System.out.println(controlLoop+"X");
+                        label4.setPrefSize(200,200);
+                        label4.setText("X");
+                }
+                else if(turn == 1){
+                        System.out.println(controlLoop+"O");
+                        label4.setPrefSize(200,200);
+                        label4.setText("O");
+                }
+                else{
+                        System.out.println(controlLoop+"SOMETHINGS WRONG");
+                }
+
+                controlLoop++;
+        }
+        public void onClicked5(){
+                turn = controlLoop % 2;
+                if(turn == 0){
+                        System.out.println(controlLoop+"X");
+                        label5.setPrefSize(200,200);
+                        label5.setText("X");
+                }
+                else if(turn == 1){
+                        System.out.println(controlLoop+"O");
+                        label5.setPrefSize(200,200);
+                        label5.setText("O");
+                }
+                else{
+                        System.out.println(controlLoop+"SOMETHINGS WRONG");
+                }
+
+                controlLoop++;
+        }
+        public void onClicked6(){
+                turn = controlLoop % 2;
+                if(turn == 0){
+                        System.out.println(controlLoop+"X");
+                        label6.setPrefSize(200,200);
+                        label6.setText("X");
+                }
+                else if(turn == 1){
+                        System.out.println(controlLoop+"O");
+                        label6.setPrefSize(200,200);
+                        label6.setText("O");
+                }
+                else{
+                        System.out.println(controlLoop+"SOMETHINGS WRONG");
+                }
+
+                controlLoop++;
+        }
+        public void onClicked7(){
+                turn = controlLoop % 2;
+                if(turn == 0){
+                        System.out.println(controlLoop+"X");
+                        label7.setPrefSize(200,200);
+                        label7.setText("X");
+                }
+                else if(turn == 1){
+                        System.out.println(controlLoop+"O");
+                        label7.setPrefSize(200,200);
+                        label7.setText("O");
+                }
+                else{
+                        System.out.println(controlLoop+"SOMETHINGS WRONG");
+                }
+
+                controlLoop++;
+        }
+        public void onClicked8(){
+                turn = controlLoop % 2;
+                if(turn == 0){
+                        System.out.println(controlLoop+"X");
+                        label8.setPrefSize(200,200);
+                        label8.setText("X");
+                }
+                else if(turn == 1){
+                        System.out.println(controlLoop+"O");
+                        label8.setPrefSize(200,200);
+                        label8.setText("O");
+                }
+                else{
+                        System.out.println(controlLoop+"SOMETHINGS WRONG");
+                }
+
+                controlLoop++;
+        }
+        public void onClicked9(){
+                turn = controlLoop % 2;
+                if(turn == 0){
+                        System.out.println(controlLoop+"X");
+                        label9.setPrefSize(200,200);
+                        label9.setText("X");
+                }
+                else if(turn == 1){
+                        System.out.println(controlLoop+"O");
+                        label9.setPrefSize(200,200);
+                        label9.setText("O");
+                }
+                else{
+                        System.out.println(controlLoop+"SOMETHINGS WRONG");
+                }
+
+                controlLoop++;
         }
 
-        public int getValue(Button button) {
-                return value;
-        }
-
-        public void changeState() throws Exception{ // was trying to make the buttons rotate though each
-                // symbol one click would be X two clicks would be O three clicks would be "-"
-                // i was later going to figure out a board refresh button
-                if(this.value == -1)
-                        this.setState(0);
-                else if(this.value == 0)
-                        this.setState(1);
-                else if (this.value == 1)
-                        this.setState(-1);
-        }
 
 }
-
-
-
-
