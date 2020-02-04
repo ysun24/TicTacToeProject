@@ -74,7 +74,6 @@ public class Controller extends Button implements EventHandler {
                 return value;
         }
 
-
         public void changeState() throws Exception{ // was trying to make the buttons rotate though each
                 // symbol one click would be X two clicks would be O three clicks would be "-"
                 // i was later going to figure out a board refresh button
