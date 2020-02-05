@@ -11,7 +11,8 @@ import javafx.scene.control.Label;
 import javax.swing.*;
 
 public class Controller {
-
+                //Andy- new comment i did to make sure everything works!
+                //using Git to do the commit..
         int controlLoop = 0;
         int turn = 0;
         @FXML
